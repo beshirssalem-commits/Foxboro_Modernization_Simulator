@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Foxboro Modernization Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Foxboro Instrumentation Modernization Simulator</h1>
+
+    <div class="buttons">
+        <button onclick="showScenario('old')">Existing System</button>
+        <button onclick="showScenario('modular')">Modular Replacement</button>
+        <button onclick="showScenario('electronic')">Electronic Upgrade</button>
+        <button onclick="showScenario('dcs')">DCS / SCADA</button>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="field">
+
+        <h2>Field Instruments</h2>
+
+        <div class="equipment furnace">
+            🔥 Furnace
+            <br>
+            TC-101
+        </div>
+
+        <div class="equipment reactor">
+            ⚗ Reactor
+            <br>
+            RTD-201
+        </div>
+
+    </div>
+
+    <div class="control-room">
+
+        <h2>Control Room</h2>
+
+        <div class="back-panel">
+
+            <h3>Back Panel</h3>
+
+            <div id="backPanelContent"></div>
+
+        </div>
+
+        <div class="front-panel">
+
+            <h3>Front Panel</h3>
+
+            <div id="frontPanelContent"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="calculator">
+
+    <h3>Signal Calculator</h3>
+
+    Temperature:
+    <input type="range"
+           min="0"
+           max="800"
+           value="400"
+           id="tempSlider">
+
+    <p id="tempValue"></p>
+    <p id="maValue"></p>
+    <p id="psiValue"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
